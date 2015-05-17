@@ -9,7 +9,6 @@
     }
 
     maxDivider = Math.sqrt(input);
-    maxDivider = Math.floor(maxDivider);
 
     while ((prime === true) && divider <= maxDivider) {
         if (input % divider === 0) {
