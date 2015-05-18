@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Loops</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <h3>(Please, use the input fields to enter values)</h3>
+    <article>
+        <h2>Problem 1. Numbers</h2>
+        <p>Write a script that prints all the numbers from 1 to N.</p>
+        <div>
+            <span>Please enter N:</span>
+            <input type="text" id="input-first-task" />
+            <button onclick="numbersToN()">Submit</button>
+        </div>
+        <p id="first-task-result">(Result...) </p>
+    </article>
+    <article>
+        <h2>Problem 2. Numbers not divisible</h2>
+        <p>Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time</p>
+        <div>
+            <span>Please enter N:</span>
+            <input type="text" id="input-second-task" />
+            <button onclick="numbersNotDivisible()">Submit</button>
+        </div>
+        <p id="second-task-result">(Result...) </p>
+    </article>
+    <article>
+        <h2>Problem 3. Min/Max of sequence</h2>
+        <p>Write a script that finds the max and min number from a sequence of numbers.</p>
+        <div>
+            <span>Please enter numbers separated by comma and/or whitespace:</span>
+            <input type="text" id="input-third-task" placeholder="1, 4, 5.1, 10" />
+            <button onclick="minMaxOfSequence()">Submit</button>
+        </div>
+        <p id="third-task-result1">(Result...)</p>
+        <p id="third-task-result2">(Result...)</p>
+    </article>
+    <article>
+        <h2>Problem 4. Lexicographically smallest</h2>
+        <p>Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects.</p>
+        <div>
+            <span>Please click:</span>
+            <button onclick="lexicographicallyOrdered()">Click</button>
+        </div>
+        <p id="fourth-task-result1">(Result...)</p>
+        <p id="fourth-task-result2">(Result...)</p>
+        <p id="fourth-task-result3">(Result...)</p>
+    </article>
+    <script src="scripts/numbersFrom1ToN.js"></script>
+    <script src="scripts/numbersNotDivisible.js"></script>
+    <script src="scripts/minMaxOfSequence.js"></script>
+    <script src="scripts/lexicographicallySmallest.js"></script>
+</body>
+</html>
