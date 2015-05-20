@@ -28,3 +28,6 @@ function getTheGreatestNumber() {
 
 console.log("The biggest of five numbers:");
 console.log(getTheGreatestNumber(0, -2.5, 0, 5, 5));
+
+// or just use Math.max
+console.log(Math.max(-8, -7, -1.5, -1.6));
