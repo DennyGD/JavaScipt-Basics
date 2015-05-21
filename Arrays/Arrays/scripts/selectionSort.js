@@ -4,38 +4,40 @@
 //  move it at the second position, etc.
 //  Hint: Use a second array
 
-var arrNumbers = [10, 0, -6, 255, 1000, 3.5];
-console.log("SELECTION SORT");
-console.log("Unsorted array:", arrNumbers);
-console.log("Sorted:", sortArray(arrNumbers));
+(function () {
+    var arrNumbers = [10, 0, -6, 255, 1000, 3.5];
+    console.log("SELECTION SORT");
+    console.log("Unsorted array:", arrNumbers);
+    console.log("Sorted:", sortArray(arrNumbers));
 
-function sortArray(arr) {
-    if (arr.length === 0) {
-        return "Empty array";
-    }
-
-    var minValue = Number.MAX_SAFE_INTEGER,
-        currentNum,
-        holdValue,
-        position,
-        arrLength = arr.length;
-
-    for (var index = 0; index < arrLength; index++) {
-
-        for (var i = index; i < arrLength; i++) {
-            currentNum = arr[i];
-            if (currentNum < minValue) {
-                minValue = currentNum;
-                position = i;
-            }
+    function sortArray(arr) {
+        if (arr.length === 0) {
+            return "Empty array";
         }
-        holdValue = arr[index];
-        arr[index] = minValue;
-        arr[position] = holdValue;
-        minValue = Number.MAX_SAFE_INTEGER;
-    }
 
-    return arr;
-}
+        var minValue = Number.MAX_SAFE_INTEGER,
+            currentNum,
+            holdValue,
+            position,
+            arrLength = arr.length;
+
+        for (var index = 0; index < arrLength; index++) {
+
+            for (var i = index; i < arrLength; i++) {
+                currentNum = arr[i];
+                if (currentNum < minValue) {
+                    minValue = currentNum;
+                    position = i;
+                }
+            }
+            holdValue = arr[index];
+            arr[index] = minValue;
+            arr[position] = holdValue;
+            minValue = Number.MAX_SAFE_INTEGER;
+        }
+
+        return arr;
+    }
+}());
 
 //  https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
